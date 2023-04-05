@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 const char hash = '#';
 
@@ -20,10 +22,25 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
+	char* str = argv[1];
+	for (int i = 0; i < strlen(str); i++) {
+		if (!isdigit(str[i])) {
+			err("Character not an integer");
+
+			return 1;
+		}
+	}
+
 	int no = atoi(argv[1]);
 
 	if (!no) {
 		err("Value null");
+
+		return 1;
+	}
+
+	if (no < 0) {
+		err("Value negative");
 
 		return 1;
 	}
