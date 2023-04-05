@@ -22,6 +22,12 @@ int main(int argc, char* argv[]) {
 
 	int no = atoi(argv[1]);
 
+	if (!no) {
+		err("Value null");
+
+		return 1;
+	}
+
 	printf("%c%d\n", hash, no);
 
 	return 0;
