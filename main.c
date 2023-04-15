@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	printf("%c%d\n", hash, no);
+	printf("%c%d", hash, no);
 
 	return 0;
 }
