@@ -1,6 +1,6 @@
 CC=gcc
 
-EXEC=no
+EXEC=cnt
 
 BUILDDIR=build
 
